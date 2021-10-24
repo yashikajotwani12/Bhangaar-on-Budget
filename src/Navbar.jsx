@@ -1,9 +1,18 @@
-import React from 'react'
+import React,{useContext} from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Link, useLocation } from "react-router-dom"
+import { Link, useLocation,useHistory } from "react-router-dom"
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import { userContext } from './App';
+
 function Navbar() {
+    const history = useHistory();
+    const {userexist,setuserexist}=useContext(userContext);
     const location = useLocation();
+    const logout = ()=>{
+        setuserexist(false);
+        localStorage.setItem('userexist',"false");
+        history.push('/')
+    }
     return (
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
@@ -23,7 +32,20 @@ function Navbar() {
                         </li>
                     </ul>
                     <div>
-                        <Link class={`nav-link ${location.pathname === '/profile' ? 'active' : ''}`} to="profile" style={{color: 'white'}}> <AccountCircleIcon /> My Profile</Link>
+                        {
+                            userexist?
+                            <div style={{display:'flex'}} >
+                            <Link class={`nav-link ${location.pathname === '/profile' ? 'active' : ''}`} to="profile" style={{color: 'white'}}> <AccountCircleIcon /> My Profile</Link>
+                            <button className="secondary-button-two" onClick={logout}>Logout</button>
+                            </div>
+                            : 
+                            <div style={{display:'flex'}} >
+                            <Link class={`nav-link ${location.pathname === '/login' ? 'active' : ''}`} to="login" style={{color: 'white'}}> Login</Link>
+                            
+                            <Link class={`nav-link ${location.pathname === '/register' ? 'active' : ''}`} to="register" style={{color: 'white'}}> Register</Link>
+                            </div>
+                        }
+                        
                     </div>
                 </div>
             </div>

@@ -19,8 +19,8 @@ function SellScrap() {
             price: 13
         },
         {
-            data: "Newspaper- 13/kg",
-            price: 13
+            data: "Bottle- 5/kg",
+            price: 5
         },
         {
             data: "Newspaper- 13/kg",

@@ -1,12 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import {userContext} from "../App"
+
 function UserProfile() {
+    const {userdetails} = useContext(userContext);
     return (
         <div className="user-wrapper">
             <div className="profile-card" style={{display: 'flex', alignItem:'center', }}>
                 <AccountCircleIcon />
                 <div className="div">
-                    <h3>Vedant's Recent Transactions</h3>
+                    <h3>{userdetails.name}'s Recent Transactions</h3>
                 </div>
             </div>
             <div className="transactions">
