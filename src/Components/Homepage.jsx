@@ -1,7 +1,7 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../style.css"
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom"
 
 function Homepage() {
     return (
@@ -9,7 +9,13 @@ function Homepage() {
             <div className="landing-page">
                 <div className="left">
                     <h1 className="heading">Bhangaar on Budget</h1>
-                    <p className="para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius deleniti dolorum dolores nihil tenetur suscipit qui, possimus tempore aliquam dolorem, incidunt sit molestias, odit ex? Similique ea fuga numquam assumenda. Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis rerum velit mollitia molestiae consequatur aut accusantium libero voluptates totam deleniti nobis id cupiditate, soluta modi autem sapiente corrupti! Ipsa, quia?</p>
+                    <p className="para">
+                        Don't know what to do with the pile of garbage? <br />
+                        <b><i>Sell or Donate</i></b> us in <b><i>Bhangaar on Budget</i></b> and get exciting and reasonable refunds.
+                        Reach out to numerous NGOs. <br />
+                        Get your garbage recycled and reused! <br />
+                        <i>Save the environment, help the mankind!</i>
+                    </p>
                     <div className="buttons">
                         <a className="primary-button">Sell your Scrap</a>
                         <a className="secondary-button">Donate your Scrap</a>
@@ -21,7 +27,7 @@ function Homepage() {
             </div>
             <center><h1 className="sub-heading" id="about">About Us</h1></center>
             <div className="landing-page about">
-                <div className="right" style={{ display: 'flex', flexWrap: 'wrap', borderRadius:'10px', overflow:'hidden' }}>
+                <div className="right" style={{ display: 'flex', flexWrap: 'wrap', borderRadius: '10px', overflow: 'hidden' }}>
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmQBx08Oy1GidPOecE4bN5E_dlKMqVWAP3BA&usqp=CAU" alt="" />
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzQzgicrCxm9WpkeKCduzB6_wnk0GLdGDyOQ&usqp=CAU" alt="" />
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8zR_-qrWjxdmdZ313ZDO-ifBpye4QcTIbkg&usqp=CAU" alt="" />

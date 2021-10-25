@@ -1,4 +1,7 @@
-import React, { useState } from 'react'
+import axios from 'axios'
+import React, { useContext, useState } from 'react'
+import { useHistory } from 'react-router'
+import { userContext } from '../App'
 import "../style.css"
 
 
@@ -13,6 +16,8 @@ function Scrap({data, price, addprice, removeprice}) {
 }
 
 function SellScrap() {    
+    const history = useHistory()
+    const {userdetails}=useContext(userContext)
     const srcapdetails = [
         {
             data: "Newspaper- 13/kg",
@@ -43,19 +48,42 @@ function SellScrap() {
             price: 13
         },
     ]
-    const [grand, setgrand] = useState(0);
     const addprice = (value) =>{
         setgrand(grand+value);
     }
     const removeprice = (value) =>{
         setgrand(grand-value<0?0:grand-value);
     }
+    const [url,seturl]=useState('');
+    const [grand, setgrand] = useState(0);
+    const [location,setlocation] = useState('');
+    const [phone,setphone]=useState();
+    const [date,setdate]=useState('')
+
+
+    const submit=async(e)=>{
+        e.preventDefault();
+        if(grand === 0){
+            alert('Price should not be 0');
+            return;
+        }
+        else if(url==='' || location==='' || phone===null || date===''){
+            alert('Empty Inputs');
+            return;
+        }
+
+        const sell_item = await axios.post('/sellscrap',{url,total:grand,location,phone,date,email: userdetails.email});
+        if(sell_item.status === 201){
+            alert('Thankyou, your order is in the Queue!');
+            history.push('/');
+        }
+    }
     return (
         <div className="wrapper">
             <div className="main-form">
                 <div className="input-field">
                     <h3>Srcap Photo URL</h3>
-                    <input type="text" />
+                    <input type="text" value={url} onChange={e=>seturl(e.target.value)} />
                 </div>
                 <div className="input-field">
                     <h3>Scrap Price</h3>
@@ -72,18 +100,18 @@ function SellScrap() {
                 </div>
                 <div className="input-field">
                     <h3>Your Location</h3>
-                    <input type="text" />
+                    <input type="text" value={location} onChange={e=>setlocation(e.target.value)} />
                 </div>
                 <div className="input-field">
                     <h3>Phone Number</h3>
-                    <input type="text" />
+                    <input type="text" value={phone} onChange={e=>setphone(e.target.value)} />
                 </div>
                 <div className="input-field">
                     <h3>Date to Pick</h3>
-                    <input type="date" required="true" />
+                    <input type="date" required="true" value={date} onChange={e=>setdate(e.target.value)} />
                 </div>
                 
-                <button className="primary-button">Confirm</button>
+                <button className="primary-button" onClick={submit} >Confirm</button>
             </div>
         </div>
 
