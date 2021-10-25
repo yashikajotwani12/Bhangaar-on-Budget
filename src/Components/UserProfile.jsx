@@ -39,7 +39,7 @@ function UserProfile() {
                 }
                 {
                     donate.map((item)=>(
-                        <div className="transaction Donate">Donated on {item.date} to {item.donate_to}</div>
+                        <div className="transaction Donate">Donated on {item.date}</div>
                     ))
                 }
                 {

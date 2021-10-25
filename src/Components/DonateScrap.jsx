@@ -17,7 +17,7 @@ function DonateScrap() {
             alert('Empty Inputs');
             return;
         }
-        const donate_item = await axios.post('https://bhangaar-api.herokuapp.com/donate_scrap',{url,donate_to,location,phone,date,email:userdetails.email})
+        const donate_item = await axios.post('https://bhangaar-api.herokuapp.com/donate_scrap',{url,donate_to:"NGO",location,phone,date,email:userdetails.email})
         if(donate_item.status === 201)
         {
             alert('Thanks for Donating');
@@ -31,10 +31,10 @@ function DonateScrap() {
                     <h3>Srcap Photo URL</h3>
                     <input type="text" value={url} onChange={e=>seturl(e.target.value)} />
                 </div>
-                <div className="input-field">
+                {/* <div className="input-field">
                     <h3>Donate to (NGO Name):</h3>
                     <input type="text" value={donate_to} onChange={e=>setDonate(e.target.value)} />
-                </div>
+                </div> */}
                 <div className="input-field">
                     <h3>Your Location</h3>
                     <input type="text" value={location} onChange={e=>setlocation(e.target.value)} />

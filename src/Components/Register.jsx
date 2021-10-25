@@ -27,7 +27,10 @@ function Register() {
             <div className="left">
                 <a href="#">Bhangaar On Budget</a>
                 <img src="https://pratibharana.com/wp-content/uploads/2021/04/web-development-banner.jpg" alt="" />
-                <h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam impedit assumenda tenetur placeat saepe quod, repellendus odio dolor fuga necessitatibus.</h3>
+                <h3>
+                Don't know what to do with the pile of garbage? <br />
+                        <b><i>Sell or Donate</i></b> us in <b><i>Bhangaar on Budget</i></b> and get exciting and reasonable refunds.
+                </h3>
             </div>
             <div className="right">
                 <h2>Welcome</h2>

@@ -17,8 +17,8 @@ function Homepage() {
                         <i>Save the environment, help the mankind!</i>
                     </p>
                     <div className="buttons">
-                        <a className="primary-button">Sell your Scrap</a>
-                        <a className="secondary-button">Donate your Scrap</a>
+                        <Link className="primary-button" to="sell-scrap">Sell your Scrap</Link>
+                        <Link className="secondary-button" to="donate-scrap">Donate your Scrap</Link>
                     </div>
                 </div>
                 <div className="right">
@@ -34,34 +34,35 @@ function Homepage() {
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpAjUjTPWpP1kPXdJdC_oblX0Gzhiez7EGlQ&usqp=CAU" alt="" />
                 </div>
                 <div className="left">
-                    <div className="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur provident inventore nam, dolorem fuga quasi repellat excepturi eum. Rerum, ratione! Nihil quis a, sed doloribus perspiciatis doloremque rerum quas molestiae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, eaque. Fugit, quam beatae possimus illum saepe dolorem dolorum perferendis explicabo sunt doloribus architecto quisquam id ipsa. Suscipit animi voluptas ad!</div>
+                    <div className="para">We in Bhangaar on Budget are working towards a green and clean environment by reusing and recycling the waste materials found in our house. The waste products or "Kabaad" of someone can turn out to be useful for someone else. Without disrupting the livelihood of the "kabaadiwalas" we are trying to work with/for them to make the connection between the buyer and the seller more smooth and transparent.</div>
                 </div>
             </div>
             <div className="section services" style={{ height: '100vh' }}>
 
                 <center><h1 className="sub-heading" id="services">Our Services</h1></center>
-                <p className="para" style={{ width: '70%' }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, dolorem id amet similique vero deleniti eum cum nesciunt possimus quod odit. Dignissimos praesentium laboriosam soluta ipsum quas dolor impedit aliquid.</p>
+                <p className="para" style={{ width: '70%' }}>Bhangaar on Budget offer variety of services to dispose your scrap at it upmost value and contribute to the environment!</p>
                 <div className="card-wrapper">
                     <div className="service-card">
+                        
                         <img src="https://www.thekabadiwala.com/images/landing/hand.svg" alt="" />
-                        <h3>Lorem ipsum dolor sit amet.</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quia voluptatum quas ex praesentium minima cumque, nisi eos sunt perferendis perspiciatis dolor accusamus maiores natus fugiat aspernatur similique omnis dolore.</p>
-                    </div>
-                    <div className="service-card">
-                        <img src="https://www.thekabadiwala.com/images/landing/rupee-arrow.svg" alt="" />
-                        <h3>Lorem ipsum dolor sit amet.</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quia voluptatum quas ex praesentium minima cumque, nisi eos sunt perferendis perspiciatis dolor accusamus maiores natus fugiat aspernatur similique omnis dolore.</p>
+                        <h3>Helping Hands</h3>
+                        <p>We provides you a great opportunities to help others. Donate your old books,Clothes and will be used by NGO's.</p>
                     </div>
                     <div className="service-card">
                         <img src="https://www.thekabadiwala.com/images/landing/weight-machine.svg" alt="" />
-                        <h3>Lorem ipsum dolor sit amet.</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quia voluptatum quas ex praesentium minima cumque, nisi eos sunt perferendis perspiciatis dolor accusamus maiores natus fugiat aspernatur similique omnis dolore.</p>
+                        <h3>Fixed and standard Prices</h3>
+                        <p>Trust us when we talk about fair and transparent deal with you.  Standard prices are our priority.</p>
                     </div>
+                    <div className="service-card">
+                        <img src="https://www.thekabadiwala.com/images/landing/rupee-arrow.svg" alt="" />
+                        <h3>Easy Accessible</h3>
+                        <p>Our user friendly website ensures you comfort and a hassle free scrap selling experience like never before!</p>
+                    </div>
+                    
                 </div>
             </div>
             <div className="section about">
-                <center><h1 className="sub-heading" id="sell-donate">Sell/Donate your Srap</h1></center>
-                <p className="para" style={{ width: '70%' }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, dolorem id amet similique vero deleniti eum cum nesciunt possimus quod odit. Dignissimos praesentium laboriosam soluta ipsum quas dolor impedit aliquid.</p>
+                {/* <center><h1 className="sub-heading" id="sell-donate">Sell/Donate your Srap</h1></center> */}
                 <div className="services-step-container" style={{ display: 'flex', margin: '2rem 0' }}>
                     <div className="sell-scarp-steps">
                         <h1 className="sub-heading" style={{ fontSize: '2rem' }}>Sell your Scrap</h1>
