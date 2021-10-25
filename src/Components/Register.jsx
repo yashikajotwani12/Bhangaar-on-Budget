@@ -11,7 +11,7 @@ function Register() {
 
     const submit = async(e)=>{
         e.preventDefault();
-        const user_register = await axios.post('/register',{name,email,password,phone,location});
+        const user_register = await axios.post('https://bhangaar-api.herokuapp.com/register',{name,email,password,phone,location});
         if(user_register.status === 201){
             alert('User Registered Successfully');
             history.push('login');

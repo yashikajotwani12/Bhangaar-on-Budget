@@ -12,7 +12,7 @@ function Login() {
     const [password,setpassword] = useState();
     const submit = async(e)=>{
         e.preventDefault();
-        const user_login = await axios.post('/login',{email,password});
+        const user_login = await axios.post('https://bhangaar-api.herokuapp.com/login',{email,password});
         if(user_login.status === 200){
             alert('User Logged In Successfully');
             setuserexist(true);

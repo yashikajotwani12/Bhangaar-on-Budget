@@ -8,14 +8,15 @@ function UserProfile() {
     const [sell, setsell] = useState([]);
     const [donate, setdonate] = useState([]);
     const fetchSell = async () => {
-        const sell_data = await axios.get(`/sold_scrap/${userdetails.email}`);
-        const data = sell_data.data
-        setsell(data.result);
+        const sell_data = await axios.get(`https://bhangaar-api.herokuapp.com/sold_scrap/${userdetails.email}`);
+        const data = await sell_data.data 
+        const final = await data.result
+        await setsell(final)
     }
     const fetchDonate = async () => {
-        const donate_data = await axios.get(`/donated_scrap/${userdetails.email}`);
-        const data = donate_data.data;
-        setdonate(data.result);
+        const donate_data = await axios.get(`https://bhangaar-api.herokuapp.com/donated_scrap/${userdetails.email}`);
+        const data = await donate_data.data;
+        const final = await data.result
     }
 
     useEffect(() => {
@@ -34,7 +35,7 @@ function UserProfile() {
                 {
                     (donate.length === 0 && sell.length === 0)?(
                         <h1><center>No Transaction's</center></h1>
-                    ):{}
+                    ):null
                 }
                 {
                     donate.map((item)=>(
@@ -43,7 +44,7 @@ function UserProfile() {
                 }
                 {
                     sell.map((item) => (
-                        <div className={`transaction Sell ${item.status === 'Confirm' ? 'Confirm':'Pending'}`}>Order Placed on {item.date} <span>{item.status}</span></div>
+                        <div className={`transaction Sell ${item.status === 'Confirm' ? 'Confirm':'Pending'}`}>Order Placed of Rupees {item.total} to collect from {item.location} on {item.date} & <span>{item.status}</span></div>
                     ))
                 }
             </div>

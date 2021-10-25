@@ -17,7 +17,7 @@ function DonateScrap() {
             alert('Empty Inputs');
             return;
         }
-        const donate_item = await axios.post('/donate_scrap',{url,donate_to,location,phone,date,email:userdetails.email})
+        const donate_item = await axios.post('https://bhangaar-api.herokuapp.com/donate_scrap',{url,donate_to,location,phone,date,email:userdetails.email})
         if(donate_item.status === 201)
         {
             alert('Thanks for Donating');

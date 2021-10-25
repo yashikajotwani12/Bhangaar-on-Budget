@@ -100,7 +100,7 @@ function SellScrap() {
             return;
         }
 
-        const sell_item = await axios.post('/sellscrap',{url,total:grand,location,phone,date,email: userdetails.email});
+        const sell_item = await axios.post('https://bhangaar-api.herokuapp.com/sellscrap',{url,total:grand,location,phone,date,email: userdetails.email});
         if(sell_item.status === 201){
             alert('Thankyou, your order is in the Queue!');
             history.push('/');
