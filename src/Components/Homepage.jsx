@@ -2,6 +2,7 @@ import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../style.css"
 import { Link } from "react-router-dom"
+import Logo from "../Logo.jpeg"
 
 function Homepage() {
     return (
@@ -21,8 +22,8 @@ function Homepage() {
                         <Link className="secondary-button" to="products">Buy Product</Link>
                     </div>
                 </div>
-                <div className="right">
-                    <img src="https://treact.owaiskhan.me/static/media/MainLandingPageHero.30b38078.png" style={{ width: '30rem' }} alt="" />
+                <div>
+                    <img src={Logo} style={{ width: '30rem', borderRadius: '10px', marginRight:'2rem' }} alt="" />
                 </div>
             </div>
             <center><h1 className="sub-heading" id="about">About Us</h1></center>
@@ -37,7 +38,7 @@ function Homepage() {
                     <div className="para">We in Bhangaar on Budget are working towards a green and clean environment by reusing and recycling the waste materials found in our house. The waste products or "Kabaad" of someone can turn out to be useful for someone else. Without disrupting the livelihood of the "kabaadiwalas" we are trying to work with/for them to make the connection between the buyer and the seller more smooth and transparent.</div>
                 </div>
             </div>
-            <div className="section services" style={{ height: '100vh' }}>
+            <div className="section services" style={{ height: '70vh' }}>
 
                 <center><h1 className="sub-heading" id="services">Our Services</h1></center>
                 <p className="para" style={{ width: '70%' }}>Bhangaar on Budget offer variety of services to dispose your scrap at it upmost value and contribute to the environment!</p>
@@ -58,14 +59,12 @@ function Homepage() {
                         <h3>Easy Accessible</h3>
                         <p>Our user friendly website ensures you comfort and a hassle free scrap selling experience like never before!</p>
                     </div>
-                    
                 </div>
             </div>
             <div className="section about">
-                {/* <center><h1 className="sub-heading" id="sell-donate">Sell/Donate your Srap</h1></center> */}
+                <center><h1 className="sub-heading" id="sell-donate">Sell your Srap</h1></center>
                 <div className="services-step-container" style={{ display: 'flex', margin: '2rem 0' }}>
                     <div className="sell-scarp-steps">
-                        <h1 className="sub-heading" style={{ fontSize: '2rem' }}>Sell your Scrap</h1>
                         <div className="center-line"></div>
                         <div className="step-card">
                             <img src="https://www.thekabadiwala.com/images/landing/step-1.svg" alt="" />
@@ -79,23 +78,6 @@ function Homepage() {
                         <div className="step-card">
                             <img src="https://www.thekabadiwala.com/images/landing/step-3.svg" alt="" />
                             <h1 className="card-h">3. "Kabadiwala" will arrive at your Door-step.</h1>
-                        </div>
-                    </div>
-                    <div className="sell-scarp-steps">
-                        <h1 className="sub-heading" style={{ fontSize: '2rem' }}>Donate your Scrap</h1>
-                        <div className="center-line"></div>
-                        <div className="step-card">
-                            <img src="https://www.thekabadiwala.com/images/landing/step-1.svg" alt="" />
-                            <h1 className="card-h">1. Select Scrap You want to Donate.</h1>
-                        </div>
-                        <span className="line"></span>
-                        <div className="step-card">
-                            <img src="https://www.thekabadiwala.com/images/landing/step-2.svg" alt="" />
-                            <h1 className="card-h">2. Choose the Date to pick up the scrap.</h1>
-                        </div>
-                        <div className="step-card">
-                            <img src="https://www.thekabadiwala.com/images/landing/step-3.svg" alt="" />
-                            <h1 className="card-h">3. NGO team worker will arrive at your Door-step.</h1>
                         </div>
                     </div>
                 </div>
