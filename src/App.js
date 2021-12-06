@@ -9,6 +9,7 @@ import DonateScrap from './Components/DonateScrap';
 import Userprofile from './Components/UserProfile';
 import Login from './Components/Login';
 import Register from './Components/Register';
+import Products from "./Components/Products";
 
 const userContext = createContext(null);
 export { userContext }
@@ -41,6 +42,7 @@ function App() {
                 <Route exact path='/profile' component={Userprofile} />
                 <Route exact path='/login' component={Login} />
                 <Route exact path='/register' component={Register} />
+                <Route exact path='/products' component={Products} />
               </div>
             </Switch>
             :
@@ -52,6 +54,7 @@ function App() {
                 <Route exact path='/donate-scrap' component={Login} />
                 <Route exact path='/profile' component={Login} />
                 <Route exact path='/login' component={Login} />
+                <Route exact path='/products' component={Login} />
                 <Route exact path='/register' component={Register} />
               </div>
             </Switch>

@@ -28,7 +28,7 @@ function Navbar() {
                             <Link class={`nav-link ${location.pathname === '/sell-scrap' ? 'active' : ''}`} to="sell-scrap">Sell Scrap</Link>
                         </li>
                         <li class="nav-item">
-                            <Link class={`nav-link ${location.pathname === '/donate-scrap' ? 'active' : ''}`} to="donate-scrap">Donate Scrap</Link>
+                            <Link class={`nav-link ${location.pathname === '/products' ? 'active' : ''}`} to="products">Products</Link>
                         </li>
                     </ul>
                     <div>

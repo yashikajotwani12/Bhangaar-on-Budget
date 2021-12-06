@@ -18,7 +18,7 @@ function Homepage() {
                     </p>
                     <div className="buttons">
                         <Link className="primary-button" to="sell-scrap">Sell your Scrap</Link>
-                        <Link className="secondary-button" to="donate-scrap">Donate your Scrap</Link>
+                        <Link className="secondary-button" to="products">Buy Product</Link>
                     </div>
                 </div>
                 <div className="right">
