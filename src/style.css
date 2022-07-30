@@ -3,8 +3,28 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body{
     scroll-behavior: smooth;
+    color: #fff;
+    background: -webkit-linear-gradient(110deg, #a60af3 40%, rgba(0, 0, 0, 0) 30%), -webkit-radial-gradient(farthest-corner at 0% 0%, #7a00cc 70%, #c03fff 70%);
+    background: -o-linear-gradient(110deg, #a60af3 40%, rgba(0, 0, 0, 0) 30%), -o-radial-gradient(farthest-corner at 0% 0%, #7a00cc 70%, #c03fff 70%);
+    background: -moz-linear-gradient(110deg, #a60af3 40%, rgba(0, 0, 0, 0) 30%), -moz-radial-gradient(farthest-corner at 0% 0%, #7a00cc 70%, #c03fff 70%);
+    background: linear-gradient(110deg, #a60af3 40%, rgba(0, 0, 0, 0) 30%), radial-gradient(farthest-corner at 0% 0%, #7a00cc 70%, #c03fff 70%);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 :root {
     --primary-color: rgb(100 21 255);
@@ -69,17 +89,16 @@ a{
 }
 .heading{
     font-size: 4rem;
-    color: var(--primary-color);
+    color: white;
     font-weight: bold;
 }
 .para {
     font-size: 1rem;
-    color: var(--secondary-color);
-    font-weight: 500;
+    color: #f3f1f1;
 }
 .sub-heading{
     font-size: 3rem;
-    color: var(--primary-color);
+    color: white;
     font-weight: bold;
 }
 .section {
@@ -98,9 +117,10 @@ a{
     background-color: #fff;
     background-clip: border-box;
     /* border: 1px solid rgba(0,0,0,.125); */
-    border-radius: .25rem;
-    width: 50%;
+    border-radius: 0.25rem;
+    width: 317px;
     margin: 1rem;
+    padding: 1rem;
 }
 .sell-scarp-steps {
     display: flex;
@@ -110,8 +130,9 @@ a{
     position: relative;
 }
 .step-card .card-h{
-    font-size: 1.5rem;
-    font-weight: bold;
+    font-size: 15px;
+    font-weight: 100;
+    color: black;
 }
 .center-line{
     position: absolute;
@@ -208,7 +229,7 @@ a{
     height: 100%;
     padding: 2rem;
     border-radius: 5px;
-    background: #6415ff17;
+    background: #fff;
 }
 .input-field{
     margin-bottom: 1rem;

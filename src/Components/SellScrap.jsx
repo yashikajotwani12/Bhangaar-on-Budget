@@ -82,7 +82,7 @@ function SellScrap() {
     const removeprice = (value) => {
         setgrand(grand - value < 0 ? 0 : grand - value);
     }
-    const [url,seturl]=useState('');
+    const [url,seturl]=useState('#');
     const [grand, setgrand] = useState(0);
     const [location,setlocation] = useState('');
     const [phone,setphone]=useState();
@@ -95,7 +95,7 @@ function SellScrap() {
             alert('Price should not be 0');
             return;
         }
-        else if(url==='' || location==='' || phone===null || date===''){
+        else if(location==='' || phone===null || date===''){
             alert('Empty Inputs');
             return;
         }
@@ -110,11 +110,7 @@ function SellScrap() {
         <div className="wrapper">
             <div className="main-form">
                 <div className="input-field">
-                    <h3>Srcap Photo URL</h3>
-                    <input type="text" value={url} onChange={e=>seturl(e.target.value)} />
-                </div>
-                <div className="input-field">
-                    <h3>Scrap Price</h3>
+                    <h3>Choose your scrap</h3>
                     <div className="scrap-buttons">
                         {
                             srcapdetails.map((item) => (
@@ -124,7 +120,7 @@ function SellScrap() {
                     </div>
                 </div>
                 <div>
-                    <h3>Grand Total: {grand} Rs</h3>
+                    <h3 style={{color: 'black'}}>Grand Total: {grand} Rs</h3>
                 </div>
                 <div className="input-field">
                     <h3>Your Location</h3>

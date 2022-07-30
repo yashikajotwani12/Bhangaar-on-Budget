@@ -6,14 +6,14 @@ import { userContext } from '../App';
 function DonateScrap() {
     const history = useHistory()
     const {userdetails} = useContext(userContext)
-    const [url,seturl]=useState('');
+    const [url,seturl]=useState('#');
     const [donate_to,setDonate]=useState('')
     const [location,setlocation]=useState('')
     const [phone,setphone] = useState()
     const [date,setdate]=useState('')
     const submit=async(e)=>{
         e.preventDefault();
-        if(url==='' || donate_to==='' || location==='' || date==='' || phone===null){
+        if(donate_to==='' || location==='' || date==='' || phone===null){
             alert('Empty Inputs');
             return;
         }
@@ -27,10 +27,6 @@ function DonateScrap() {
     return (
         <div className="wrapper">
             <div className="main-form">
-                <div className="input-field">
-                    <h3>Srcap Photo URL</h3>
-                    <input type="text" value={url} onChange={e=>seturl(e.target.value)} />
-                </div>
                 {/* <div className="input-field">
                     <h3>Donate to (NGO Name):</h3>
                     <input type="text" value={donate_to} onChange={e=>setDonate(e.target.value)} />

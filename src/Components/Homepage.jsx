@@ -62,7 +62,7 @@ function Homepage() {
                 </div>
             </div>
             <div className="section about">
-                <center><h1 className="sub-heading" id="sell-donate">Sell your Srap</h1></center>
+                <center><h1 className="sub-heading" id="sell-donate">Sell your Scrap</h1></center>
                 <div className="services-step-container" style={{ display: 'flex', margin: '2rem 0' }}>
                     <div className="sell-scarp-steps">
                         <div className="center-line"></div>
