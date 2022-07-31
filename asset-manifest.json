@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/Bhangaar-on-Budget/static/css/main.993c39c3.chunk.css",
-    "main.js": "/Bhangaar-on-Budget/static/js/main.62b2023a.chunk.js",
-    "main.js.map": "/Bhangaar-on-Budget/static/js/main.62b2023a.chunk.js.map",
+    "main.css": "/Bhangaar-on-Budget/static/css/main.fad936cc.chunk.css",
+    "main.js": "/Bhangaar-on-Budget/static/js/main.9d643b7d.chunk.js",
+    "main.js.map": "/Bhangaar-on-Budget/static/js/main.9d643b7d.chunk.js.map",
     "runtime-main.js": "/Bhangaar-on-Budget/static/js/runtime-main.753bc0e9.js",
     "runtime-main.js.map": "/Bhangaar-on-Budget/static/js/runtime-main.753bc0e9.js.map",
     "static/css/2.4659568d.chunk.css": "/Bhangaar-on-Budget/static/css/2.4659568d.chunk.css",
@@ -10,15 +10,15 @@
     "static/js/2.ec081397.chunk.js.map": "/Bhangaar-on-Budget/static/js/2.ec081397.chunk.js.map",
     "index.html": "/Bhangaar-on-Budget/index.html",
     "static/css/2.4659568d.chunk.css.map": "/Bhangaar-on-Budget/static/css/2.4659568d.chunk.css.map",
-    "static/css/main.993c39c3.chunk.css.map": "/Bhangaar-on-Budget/static/css/main.993c39c3.chunk.css.map",
+    "static/css/main.fad936cc.chunk.css.map": "/Bhangaar-on-Budget/static/css/main.fad936cc.chunk.css.map",
     "static/js/2.ec081397.chunk.js.LICENSE.txt": "/Bhangaar-on-Budget/static/js/2.ec081397.chunk.js.LICENSE.txt",
-    "static/media/Logo.3bc048ed.jpeg": "/Bhangaar-on-Budget/static/media/Logo.3bc048ed.jpeg"
+    "static/media/Logo.5e0e3be6.png": "/Bhangaar-on-Budget/static/media/Logo.5e0e3be6.png"
   },
   "entrypoints": [
     "static/js/runtime-main.753bc0e9.js",
     "static/css/2.4659568d.chunk.css",
     "static/js/2.ec081397.chunk.js",
-    "static/css/main.993c39c3.chunk.css",
-    "static/js/main.62b2023a.chunk.js"
+    "static/css/main.fad936cc.chunk.css",
+    "static/js/main.9d643b7d.chunk.js"
   ]
 }
